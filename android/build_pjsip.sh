@@ -9,6 +9,9 @@ cp -r /sources/pjsip /tmp/pjsip
 cat <<EOF > "/tmp/pjsip/pjlib/include/pj/config_site.h"
 #define PJ_CONFIG_ANDROID 1
 #define PJMEDIA_HAS_G729_CODEC 1
+#define PJSIP_ENCODE_SHORT_HNAME 1
+#define PJSIP_UDP_SIZE_THRESHOLD 1500
+#define PJSIP_INCLUDE_ALLOW_HDR_IN_DLG 0
 #define PJMEDIA_HAS_G7221_CODEC 1
 #include <pj/config_site_sample.h>
 #define PJMEDIA_HAS_VIDEO 1
